@@ -7,51 +7,165 @@
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b0b0f">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title> Welcome to my website</title>
+  <title>Welcome to my website</title>
+
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f7f9; /* Light background */
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #ffffff; /* White card background */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    /* Header/Profile Section */
+    .header-profile {
+      text-align: center;
+      padding: 20px 0;
+      border-bottom: 2px solid #e0e0e0;
+      margin-bottom: 20px;
+    }
+
+    .header-profile img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #007bff; /* Primary color border */
+      margin-top: 10px;
+    }
+
+    .header-profile .name {
+      font-size: 2.2em;
+      font-weight: 700;
+      color: #007bff; /* Primary color */
+      margin-top: 10px;
+      display: block; /* Span needs to be a block/line to use margin-top */
+    }
+
+    /* Headings */
+    h2 {
+      color: #007bff;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 5px;
+      margin-top: 30px;
+    }
+
+    /* Table Styles */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 12px;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+      font-weight: 600;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    /* List Styles (Skills) */
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .container {
+        margin: 20px 10px;
+        padding: 15px;
+      }
+      .header-profile .name {
+        font-size: 1.8em;
+      }
+    }
+  </style>
   </head>
-  <body>
-    <span style="font-size: 32px; font-weight: bold;">
-            Hi, I am Harshal Karangale a IIITH student
-    </span>
-    <img src="pro.jpg" alt="Description of image" style="width:200px; height:200px; border-radius:50%; object-fit:cover;" >
-<div style="margin-top:30px;">
-    <h2>About Me</h2>
-    <p style="font-size:18px; line-height:1.6;">
-      I am a student at IIIT Hyderabad with a keen interest in technology, coding, and problem-solving. 
-      I enjoy learning new concepts in computer science, working on projects, and exploring the latest 
-      developments in software and AI. In my free time, I like reading, building small applications, 
-      and experimenting with new ideas.
-    </p>
-  </div>  
-  <h2>Education</h2>
-  <table border="1">
-    <tr>
-      <th>Institution</th>
-      <th>Degree</th>
-      <th>CGPA</th>
-      <th>Duration</th>
-    </tr>
-    <tr>
-      <td>IIIT Hyderabad</td>
-      <td>M.Tech, Computer Science and Engineering</td>
-      <td>9.46</td>
-      <td>July 2025 – Present</td>
-    </tr>
-    <tr>
-      <td>Chandubhai S. Patel Institute of Technology - CHARUSAT</td>
-      <td>B.Tech, Computer Engineering</td>
-      <td>9.46</td>
-      <td>Sept 2021 – May 2025</td>
-    </tr>
-  </table>
+<body>
 
-  <h2>Skills</h2>
-  <ul>
-    <li>Programming Languages: Python, Java, C++, SQL, JavaScript (NodeJS, NextJS)</li>
-    <li>Deep Learning Frameworks: TensorFlow, Keras, PyTorch</li>
-    <li>Database Technologies: SQL, MongoDB</li>
-    <li>Statistical Modelling and Predictive Analytics</li>
-  </ul>
+<div class="container">
+    
+    <div class="header-profile">
+        <span class="name">
+            Hi, I am Harshal Karangale, a IIITH student
+        </span>
+        <img src="pro.jpg" alt="Harshal Karangale's Profile Picture">
+    </div>
 
+    <div id="about">
+        <h2>About Me</h2>
+        <p>
+          I am a student at IIIT Hyderabad with a keen interest in technology, coding, and problem-solving. 
+          I enjoy learning new concepts in computer science, working on projects, and exploring the latest 
+          developments in software and AI. In my free time, I like reading, building small applications, 
+          and experimenting with new ideas.
+        </p>
+    </div>
+    
+    <div id="education">
+        <h2>Education</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Institution</th>
+              <th>Degree</th>
+              <th>CGPA</th>
+              <th>Duration</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>IIIT Hyderabad</td>
+              <td>M.Tech, Computer Science and Engineering</td>
+              <td>9.46</td>
+              <td>July 2025 – Present</td>
+            </tr>
+            <tr>
+              <td>Chandubhai S. Patel Institute of Technology - CHARUSAT</td>
+              <td>B.Tech, Computer Engineering</td>
+              <td>9.46</td>
+              <td>Sept 2021 – May 2025</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
 
-</body>
+    <div id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Programming Languages: Python, Java, C++, SQL, JavaScript (NodeJS, NextJS)</li>
+            <li>Deep Learning Frameworks: TensorFlow, Keras, PyTorch</li>
+            <li>Database Technologies: SQL, MongoDB</li>
+            <li>Statistical Modelling and Predictive Analytics</li>
+        </ul>
+    </div>
+
+</div> </body>
+</html>
